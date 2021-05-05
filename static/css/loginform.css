@@ -1,0 +1,44 @@
+#loginId
+{
+    border: 1px solid white;
+    width:40%;
+    margin:auto;
+    display: block;
+    background-color:whitesmoke;
+}
+
+.login_heading
+{
+    text-align: center;
+}
+
+.loginForm
+{
+    text-align: center;
+    padding:20px;
+    margin:20px;
+}
+
+.loginForm .loginLabel
+{
+    font-size: 20px;
+}
+
+.loginForm .loginInput 
+{
+    margin:15px;
+    padding:10px;
+    width:60%;
+    border:1px solid white;
+}
+
+.submit_btn
+{
+    padding:10px;
+}
+
+.submit_btn:hover
+{
+    background-color: black;
+    color:white;
+}

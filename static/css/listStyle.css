@@ -1,0 +1,55 @@
+td
+{
+    text-align: center;
+}
+
+.add_link
+{
+    text-decoration: none;
+}
+
+.addNew_btn
+{
+    margin:auto;
+    display: block;
+    margin-top:20px;
+    padding:10px;
+}
+
+.addNew_btn:hover
+{
+    background-color: gray;
+    color:white;
+}
+
+.update_link
+{
+    padding:5px;
+    background-color: #28a745;
+    border:1px solid #28a745;
+}
+
+.update_link:hover
+{
+    background-color:#286336;
+}
+
+
+.delete_link
+{
+    padding:5px;
+    margin-left:15px;
+    background-color:red;
+    border:1px solid red;
+}
+
+.delete_link:hover
+{
+    background-color:rgb(202, 12, 12);
+}
+
+.link_btn
+{
+    text-decoration: none;
+    color:white;
+}

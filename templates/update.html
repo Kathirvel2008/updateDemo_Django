@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>Update Details</title>
+    <link rel="stylesheet" href="{% static 'lib/bootstrap.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/updateForm.css' %}" type="text/css" />
+    
+    <script src="{% static 'lib/bootstrap.min.js' %}" type="text/javascript"></script>
+</head>
+<body>
+    {% block content %}
+    <h1>Update Details</h1>
+
+    <div class="detailsDiv container-fluid" id="detailsId">
+        <form method="POST" class="detailsForm">{% csrf_token %}
+            <div class="row first_row">
+                <div class="col col_name">
+                    <label for="name" class="detailsLabel" id="name_label">Name</label><br>
+                    <input type="text" name="name" value="{{details_of_update.user_name}}"  id="name_input" class="detailsInput" required><br>
+                </div>
+                <div class="col col_age">
+                    <label for="age" class="detailsLabel" id="age_label">Age</label><br>
+                    <input type="number" name="age" value="{{details_of_update.user_age}}" id="age_input" class="detailsInput"><br>
+                </div>
+                <div class="col col_dob">
+                    <label for="dob" class="detailsLabel" id="dob_label">Date Of Birth</label><br>
+                    <input type="date" name="dob" value="{{details_of_update.user_dob|date:'Y-m-d'}}" id="dob_input" class="detailsInput"><br>
+                </div>
+            </div>
+
+            <div class="row second_row">
+                <div class="col col_id">
+                    <label for="id" class="detailsLabel" id="id_label">Id</label><br>
+                    <input type="number" name="id" value="{{details_of_update.user_id}}" id="id_input" class="detailsInput" required><br>
+                </div>
+                <div class="col col_city">
+                    <label for="city" class="detailsLabel" id="city_label">City</label><br>
+                    <input type="text" name="city" value="{{details_of_update.user_city}}" id="city_input" class="detailsInput"><br>
+                </div>
+                <div class="col col_country">
+                    <label for="country" class="detailsLabel" id="country_label">Country</label><br>
+                    <input type="text" name="country" value="{{details_of_update.user_country}}" id="country_input" class="detailsInput"><br>
+                </div>
+            </div>
+
+            <div class="row third_row">
+               <div class="col submit_button">
+                    <input type="submit" class="btn btn-success save_btn" value="Update">
+               </div>
+            </div>
+            
+        </form>
+
+    </div> 
+
+    {% endblock %}
+</body>
+</html>

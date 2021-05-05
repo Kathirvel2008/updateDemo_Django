@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'lib/iziToast.min.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/loginform.css' %}" type="text/css" />
+
+    <script src="{% static 'lib/jquery.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'lib/iziToast.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/loginScript.js' %}" type="text/javascript"></script>
+</head>
+
+<body>
+    
+    {% block content %}
+
+    <div class="loginDiv" id="loginId">
+
+        <h1 class="login_heading">Login</h1> 
+        <form action="{% url 'List' %}" method="post" class="loginForm">{% csrf_token %} 
+           
+           <div class="inner_form">
+            <label for="Uname" class="loginLabel">Username</label><br>
+            <input type="text" id="Uname" autocomplete="off" class="loginInput" name="Uname" required><br>
+
+            <label for="pwd" class="loginLabel">Password</label><br>
+            <input type="password" id="pwd" class="loginInput" name="pwd" required><br>
+
+            <label for="confirm_pwd" class="loginLabel">Confirm Password</label><br>
+            <input type="password" id="confirm_pwd" class="loginInput" name="confirm_pwd" required><br>
+            
+            <button class="submit_btn" value="submit">Login</button>
+           </div>
+
+        </form>
+    </div>
+
+   
+    {% endblock %}
+</body>
+</html>
